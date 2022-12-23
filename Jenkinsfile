@@ -1,12 +1,12 @@
 pipeline {
-    agent any 
+    agent any
 
-    stages() {
-       stage('Clone'){
-        steps {
-            cleanWs()
-            checkout scm
+    stages(){
+        stage('clone'){
+            steps {
+                cleanWs()
+                checkout scm
+            }
         }
-       }
     }
 }
