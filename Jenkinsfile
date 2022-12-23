@@ -1,11 +1,12 @@
 pipeline {
     agent any 
 
-    stages {
-        stage('build') {
-            steps {
-                sh 'node --version' 
-            }
+    stages() {
+       stage('Clone'){
+        steps {
+            cleanWs()
+            checkout SCM
         }
+       }
     }
 }
