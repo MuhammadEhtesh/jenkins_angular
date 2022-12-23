@@ -5,7 +5,7 @@ pipeline {
        stage('Clone'){
         steps {
             cleanWs()
-            checkout SCM
+            checkout scm
         }
        }
     }
